@@ -12,4 +12,4 @@ const emitter = new EventEmitter();
 
 emitter.on('messageLogging', (arg) => { console.log('Message logging', arg); })
 
-emitter.emit('messageLogging', { message: 'Message is logging on Port 8.8.8.8' });
+logger('Holla');
