@@ -1,7 +1,6 @@
-const logger = require('./logger');
+const Logger = require('./logger');
 const fs = require('fs');
-const EventEmitter = require('events');
-const emitter = new EventEmitter();
+const logger = new Logger();
 
 //logger.log();
 
@@ -10,6 +9,6 @@ const emitter = new EventEmitter();
 //     else console.log(files);
 // })
 
-emitter.on('messageLogging', (arg) => { console.log('Message logging', arg); })
+logger.on('messageLogging', (arg) => { console.log('Message logging', arg); })
 
-logger('Holla');
+logger.log('Holla');
