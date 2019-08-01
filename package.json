@@ -1,0 +1,23 @@
+{
+  "name": "nodework",
+  "version": "1.0.0",
+  "description": "nodeWork",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dontskipnine/nodeWork.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dontskipnine/nodeWork/issues"
+  },
+  "homepage": "https://github.com/dontskipnine/nodeWork#readme",
+  "dependencies": {
+    "mongoose": "^5.6.7",
+    "underscore": "^1.4.0"
+  }
+}
