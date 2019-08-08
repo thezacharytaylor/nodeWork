@@ -20,15 +20,15 @@ app.get('/api/genres', (req, res) => {
 // Get One
 app.get('/api/genres/:id', (req, res) => {
     // Confirm genre
-    // const genre =
-    //return result
+    const genre = genres.find(c => c.id === parseInt(req.params.id));
+    if (!genre) return res.status(404).send('404: Genre Not Found');
     res.send(genres(req.id)); 
 });
 
 // Create aka Post
 app.post('/api/genres', (req, res) => {
     // Validate
-    const { error } = validateCourse(req.body);
+    const { error } = validateGenre(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
     // If true, create object && push && return result.
@@ -43,9 +43,11 @@ app.post('/api/genres', (req, res) => {
 });
 
 // Update aka Put
+app.put('/api/genres', );
+
 // Delete aka ..
 
-function validateCourse(genre) {
+function validateGenre(genre) {
     const schema = { name: Joi.string().min(3).required() }
     return Joi.validate(genre, schema);
 };
