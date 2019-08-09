@@ -1,3 +1,6 @@
+// Notes: get is working, but not specifically.
+// To Test: Post, Put, & Delete.
+
 const Joi = require('@hapi/joi');
 const express = require('express');
 const app = express();
