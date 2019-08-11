@@ -1,3 +1,5 @@
+// Note: All tests pass.
+
 // Import necessary packages
 const Joi = require ('@hapi/joi');
 const express = require ('express');
@@ -24,7 +26,7 @@ app.get('/api/genres/:id', (req, res) => {
     // Confirm genre
     const genre = genres.find(g => g.id === parseInt(req.params.id));
     if (!genre) return res.status(404).send('404: Genre Not Found');
-    res.send(genres(req.id)); 
+    res.send(genre); 
 });
 
 // Create aka Post
@@ -50,7 +52,7 @@ app.put('/api/genres/:id', (req, res) => {
     if (!genre) return res.status(404).send('404: Genre Not Found');
 
     //Validation of new name
-    const { error } = validateGenre(req.body.name);
+    const { error } = validateGenre(req.body);
     if (error) return res.status(400).send(error.details[0].message);
 
     //Change name && show the new genre
