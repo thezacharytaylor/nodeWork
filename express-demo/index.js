@@ -1,8 +1,10 @@
 const Joi = require('@hapi/joi');
+const auth = require('./auth');
 const express = require('express');
 const app = express();
 
 app.use(express.json());
+app.use(auth);
 
 const courses = [
     { id: 1, name: "course1" },
